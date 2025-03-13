@@ -1,0 +1,171 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #1f1f1f, #3a3a3a);
+    color: white;
+    overflow-x: hidden;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Page Load Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #2a2a2a, #4e4e4e);
+    color: white;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    color: #ffdb4d;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    width: 300px;
+    padding: 8px;
+    border: 2px solid #ffdb4d;
+    border-radius: 4px;
+    background: #333;
+    color: white;
+}
+
+.search-bar button {
+    background: #ffdb4d;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.search-bar button:hover {
+    background: #ff9900;
+}
+
+/* Navigation Bar */
+nav {
+    background: linear-gradient(to right, #2e2e2e, #595959);
+    padding: 12px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffdb4d;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ff9900;
+    text-shadow: 0px 0px 10px rgba(255, 217, 0, 0.8);
+}
+
+/* Products */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    justify-items: center;
+}
+
+.product {
+    background: linear-gradient(to right, #4e4e4e, #787878);
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 217, 0, 0.4);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px rgba(255, 217, 0, 0.6);
+}
+
+/* Price */
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffdb4d;
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    background: #ffdb4d;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #ff9900;
+    box-shadow: 0px 0px 15px rgba(255, 217, 0, 0.8);
+}
+
+/* Flower Animation */
+#flower-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.flower {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: pink;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
